@@ -22,6 +22,7 @@ def get_keys_from_data(keys_and_chords_data):
         for k in keys_and_chords_data['keys']['major']:
             key, value = list(k.items())[0]
             keys.append(key)
+
     def add_in_minor_keys():
         for k in keys_and_chords_data['keys']['minor']:
             key, value = list(k.items())[0]
@@ -37,8 +38,26 @@ def pick_key(keys):
     k = keys[r]
     return k
 
-def find_chords(key):
-    raise NotImplemented
+
+def find_chords(key, keys_and_chords_data):
+    chords = []
+
+    def search_major():
+        for k in keys_and_chords_data['keys']['major']:
+            temp_key, value = list(k.items())[0]
+
+            if temp_key == key:
+                return value
+
+    def search_minor():
+        for k in keys_and_chords_data['keys']['minor']:
+            temp_key, value = list(k.items())[0]
+            print(value)
+            if temp_key == key:
+                return value
+
+    search_major()
+    search_minor()
 
 
 def generate_song(chords):
@@ -56,7 +75,7 @@ def run():
     key = pick_key(keys)
 
     # get the list of all chords in that key
-    chords = find_chords(key)
+    chords = find_chords(key, keys_and_chords_data)
 
     # generate a random song with those chords
     song = generate_song(chords)

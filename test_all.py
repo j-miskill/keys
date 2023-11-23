@@ -28,3 +28,9 @@ class Test_All:
 
         assert type(test_key) == str
         assert len(test_key) < 10
+
+    def test_get_chords_from_key(self):
+        test_data = get_song.read_in_keys_and_chords()
+        test_keys = get_song.get_keys_from_data(test_data)
+        test_key = get_song.pick_key(test_keys)
+        test_chords = get_song.find_chords(test_key, test_data)
