@@ -15,18 +15,18 @@
       {"D#/Eb": ["Eb", "Fm", "Gm", "Ab", "Bb", "Cm", "Ddim"]}
     ],
     "minor": [
-      {"Em": ["E", "F#m", "G#m", "A", "B", "C#m", "D#dim"]},
-      {"Fm":[]},
-      {"F#m/Gbm": []},
-      {"Gm":[]},
-      {"G#m/Abm": []},
-      {"Am": []},
-      {"A#m/Bbm": []},
-      {"Bm": []},
-      {"Cm": []},
-      {"C#m/Dbm": []},
-      {"Dm": []},
-      {"D#m/Ebm": []}
+      {"Em": ["Em", "F#", "G", "Am", "Bm", "C", "D"]},
+      {"Fm":["Fm", "G", "Ab", "Bbm", "Cm", "Db", "Eb"]},
+      {"F#m/Gbm": ["F#m", "G#", "A", "Bm", "C#m", "D", "E"]},
+      {"Gm":["Gm", "A", "Bb", "Cm", "Dm", "Eb", "F"]},
+      {"G#m/Abm": ["G#m", "A#", "B", "C#m", "D#m", "E", "F#"]},
+      {"Am": ["Am", "B", "C", "Dm", "Em", "F", "G"]},
+      {"A#m/Bbm": ["Bbm", "C", "Db", "Ebm", "Fm", "Gb", "Ab"]},
+      {"Bm": ["Bm", "C#", "D", "Em", "F#m", "G", "A"]},
+      {"Cm": ["Cm", "D", "Eb", "Fm", "Gm", "Ab", "Bb"]},
+      {"C#m/Dbm": ["C#m", "D#", "E", "F#m", "G#m", "A", "B"]},
+      {"Dm": ["Dm", "E", "F", "Gm", "Am", "Bb", "C"]},
+      {"D#m/Ebm": ["Ebm", "F", "Gb", "Abm", "Bbm", "Cb", "Db"]}
     ]
   }
 }
