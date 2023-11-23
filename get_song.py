@@ -33,8 +33,9 @@ def get_keys_from_data(keys_and_chords_data):
 
 
 def pick_key(keys):
-    raise NotImplemented
-
+    r = random.randint(0, 23)
+    k = keys[r]
+    return k
 
 def find_chords(key):
     raise NotImplemented
