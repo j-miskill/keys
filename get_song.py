@@ -63,7 +63,7 @@ def find_chords(key, keys_and_chords_data):
     return chords
 
 
-def generate_song(chords):
+def generate_song(key, chords):
     print("Generating song with these chords:", chords)
     def generate_lines():
         # could ask for how many lines
@@ -83,14 +83,20 @@ def generate_song(chords):
 
     # could implement something like "name" for the output file name
     f = open("songs/song.txt", "a")
+    f.write(f"KEY: {key}\n")
+    f.write("\n")
+    f.write("\n")
+    f.write("--------------------------- START SONG ---------------------------")
+    f.write("\n")
 
     for l in range(0, lines):
         progression = ""
         for c in range(0, chords_per_line):
             chord = get_random_chord(chords)
-            progression = progression + chord + " "
+            progression = progression + chord + "   "
 
-        f.write(progression)
+        f.write(progression + "\n")
+        f.write("\n")
     f.close()
     print('done')
 
@@ -110,7 +116,7 @@ def run():
 
     # generate a random song with those chords
     # lines, number of chords per line
-    generate_song(chords)
+    generate_song(key, chords)
 
 
 if __name__ == "__main__":
